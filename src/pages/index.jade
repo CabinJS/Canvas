@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+block content
+  each post in posts
+    mixin post(post)
+
+  ul.pagination.group
+    - for (var i = 0; i < pages.length; i++) {
+      - var page = pages[i];
+      - if (i === currentIndex - 1) {
+        li.newer
+          a(href="#{data.baseUrl}#{page.url}") Newer &#8594;
+      - } else if (i === currentIndex + 1) {
+        li.older
+          a.active-page(href="#{data.baseUrl}#{page.url}") &#8592; Older
+      - }
+    - }

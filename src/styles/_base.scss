@@ -1,0 +1,106 @@
+$offBlack: hsl(10, 1%, 22%);
+
+$codeFont: Monaco, Consolas, monospace;
+$mainFont:  Georgia, Times, "Times New Roman", serif;
+
+$baseTextColor: $offBlack;
+$lightTextColor: transparentize($baseTextColor, .5);
+
+@mixin breakpoint($point) {
+  @if $point == big-phone {
+    @media (max-width: 1250px) { @content; }
+  }
+    @else if $point == small-phone {
+    @media (max-width: 630px)  { @content; }
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: $baseTextColor;
+}
+
+
+// clearfix
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  margin: 0;
+  color: $baseTextColor;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: $mainFont;
+  font-size: 17px;
+
+  @include breakpoint(big-phone) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(small-phone) {
+    font-size: 12px;
+  }
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 620px;
+  width: 55%;
+  position: relative;
+
+  @include breakpoint(big-phone) {
+    width: 88%;
+  }
+
+  @include breakpoint(small-phone) {
+  }
+}
+
+.cabin {
+  position: fixed;
+  right: .5em;
+  bottom: .5em;
+  width: 1.6em;
+  opacity: .2;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  @include breakpoint(big-phone) {
+    display: none;
+  }
+}
+
+.pagination {
+
+  li {
+    font-size: 1.2em;
+    padding: 10px 0 20px;
+    position: absolute;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.older {
+  left: 0;
+}
+
+.newer {
+  right: 0;
+}

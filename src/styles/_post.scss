@@ -1,0 +1,67 @@
+.post-head {
+  padding-bottom: 5px;
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.post-title {
+  margin: 15px 0;
+  font-weight: normal;
+  font-size: 2.4em;
+}
+
+.post-date {
+  margin: 0px;
+  font-size: 1.3em;
+  color: $lightTextColor;
+}
+
+.post-body {
+  margin-bottom: 1.2em;
+  line-height: 1.65em;
+
+  p a:hover {
+    color: #4183c4;
+  }
+
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+.highlight {
+  padding: .2em 1em;
+}
+
+.highlight,
+p code {
+  background: hsl(240, 100%, 96%);
+  border: 1px solid hsl(0, 0%, 90%);
+  @include border-radius(3px);
+}
+
+// Inline code element
+p code {
+  padding: 0 0.23em;
+}
+
+code {
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+  line-height: 1.5em;
+  font-family: $codeFont;
+}
+
+pre {
+  font-family: $codeFont;
+  overflow: auto;
+}
