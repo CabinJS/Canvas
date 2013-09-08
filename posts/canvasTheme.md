@@ -4,7 +4,7 @@ date:  2013-12-15
 description: Description of Canvas's features
 ----
 
-Canvas is a minimal blogging theme for [Canvas ](http://cabinjs.com). To use this theme check out the [User Manual](https://github.com/CabinJS/Canvas) on GitHub.
+Canvas is a starter theme for [Canvas ](http://cabinjs.com).
 
 ## Markdown
 Cabin supports [GitHub flavored Markdown](https://help.github.com/articles/github-flavored-markdown) for its static site generation. It has awesome features like:

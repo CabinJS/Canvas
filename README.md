@@ -17,7 +17,7 @@ Then scaffold a static site generator using the Canvas theme with this command:
 cabin new blog CabinJS/Canvas
 ```
 
-Now change into the `blog` directory and run the `grunt` command: 
+Now change into the `blog` directory and run the `grunt` command:
 
 ```bash
 cd blog && grunt
