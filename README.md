@@ -14,7 +14,7 @@ npm install -g cabin grunt-cli
 Then scaffold a static site generator using the Canvas theme with this command:
 
 ```bash
-cabin new blog colinwren/Canvas
+cabin new blog CabinJS/Canvas
 ```
 
 Now change into the `blog` directory and run the `grunt` command: 

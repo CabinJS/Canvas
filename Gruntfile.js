@@ -96,7 +96,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', function(target) {
     if (target === 'GHPages') {
-      gruntPagesConfig.options.data.baseUrl = '/Candy/';
+      gruntPagesConfig.options.data.baseUrl = '/Canvas/';
     }
 
     grunt.task.run([
