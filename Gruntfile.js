@@ -2,11 +2,11 @@ module.exports = function (grunt) {
 
   var gruntPagesConfig = JSON.parse(grunt.template.process(grunt.file.read('cabin.json'), {
       data: {
-        templateEngine: grunt.option('lang') || 'jade'
+        templateEngine: grunt.option('engine') || 'jade'
       }
     })).gruntPagesConfig;
 
-  gruntPagesConfig.posts.options.templateEngine = grunt.option('lang') || 'jade';
+  gruntPagesConfig.posts.options.templateEngine = grunt.option('engine') || 'jade';
 
   grunt.initConfig({
     pages: gruntPagesConfig,
@@ -36,6 +36,17 @@ module.exports = function (grunt) {
       }
     },
     watch: {
+      engineDiff: {
+        files: [
+          'posts/**',
+          'src/layouts/**',
+          'src/pages/**'
+        ],
+        tasks: ['buildEngines', 'diffEngines'],
+        options: {
+          livereload: true
+        }
+      },
       dist: {
         files: ['dist/**'],
         options: {
@@ -84,13 +95,29 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      dist: 'dist'
+      dist: 'dist',
+      engine: '.engineDiff'
     },
     'gh-pages': {
       options: {
         base: 'dist'
       },
       src: ['**']
+    },
+    simplemocha: {
+      options: {
+        globals: ['should'],
+        timeout: 600000,
+        ignoreLeaks: false,
+        ui: 'bdd',
+        reporter: 'spec'
+      },
+      install: {
+        src: ['test/testThemeInstallation.js']
+      },
+      engine: {
+        src: ['test/testEngineDiff.js']
+      }
     }
   });
 
@@ -112,12 +139,42 @@ module.exports = function (grunt) {
     'gh-pages'
   ]);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('server', [
     'build',
     'connect',
     'open',
     'watch'
   ]);
 
+  grunt.registerTask('default', ['server']);
+
+  grunt.registerTask('test', 'Test theme using node_modules in root folder rather than downloading from npm each time', function () {
+    process.env['NODE_ENV'] = 'dev';
+    grunt.task.run('testTheme');
+  });
+
+  grunt.registerTask('testTheme', ['clean', 'buildEngines', 'simplemocha']);
+  grunt.registerTask('engineDiff', ['buildEngines', 'diffEngines', 'watch:engineDiff']);
+
+  grunt.registerTask('buildEngines', 'Builds template engines to make sure outputted html is the same', function () {
+    var ejsGruntPagesConfig = JSON.parse(grunt.template.process(grunt.file.read('cabin.json'), {
+          data: {
+            templateEngine: 'ejs'
+          }
+        })).gruntPagesConfig.posts;
+
+    ejsGruntPagesConfig.options.templateEngine = 'ejs';
+    ejsGruntPagesConfig.dest = '.engineDiff';
+    grunt.config(['pages', 'engineDiff'], ejsGruntPagesConfig);
+    grunt.task.run('pages:posts');
+    grunt.task.run('pages:engineDiff');
+  });
+
+  grunt.registerTask('diffEngines', 'Looks at the difference between each template engine\'s html output', function () {
+    require('./test/printEngineDiff.js')();
+  });
+
+
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
 };
