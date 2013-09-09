@@ -1,0 +1,21 @@
+<% locals.title = "My Blog" %>
+<% include ../layouts/_header %>
+<% posts.forEach(function(post){ %>
+  <% include ../layouts/_post %>
+<% }) %>
+
+<ul class="pagination group">
+  <% for (var i = 0; i < pages.length; i++) { %>
+    <% var page = pages[i] %>
+    <% if (i === currentIndex - 1) { %>
+      <li class="newer">
+        <a href="<%= data.baseUrl %><%= page.url %>"> Newer &#8594;</a>
+      </li>
+    <% } else if (i === currentIndex + 1) { %>
+      <li class="older">
+        <a href="<%= data.baseUrl %><%= page.url %>" class="active-page"> &#8592; Older</a>
+      </li>
+    <% } %>
+  <% } %>
+</ul>
+<% include ../layouts/_footer %>
