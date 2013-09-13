@@ -850,7 +850,32 @@ body {
   }
 }
 
-/* line 67, ../../src/styles/_base.scss */
+/* line 66, ../../src/styles/_base.scss */
+.pagination li {
+  font-size: 1.2em;
+  padding: 10px 0 20px;
+  position: absolute;
+}
+/* line 72, ../../src/styles/_base.scss */
+.pagination a {
+  text-decoration: none;
+}
+/* line 75, ../../src/styles/_base.scss */
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+/* line 81, ../../src/styles/_base.scss */
+.older {
+  left: 0;
+}
+
+/* line 85, ../../src/styles/_base.scss */
+.newer {
+  right: 0;
+}
+
+/* line 89, ../../src/styles/_base.scss */
 .cabin {
   position: fixed;
   right: .5em;
@@ -858,40 +883,15 @@ body {
   width: 1.6em;
   opacity: .2;
 }
-/* line 74, ../../src/styles/_base.scss */
+/* line 96, ../../src/styles/_base.scss */
 .cabin:hover {
   opacity: .6;
 }
 @media (max-width: 1250px) {
-  /* line 67, ../../src/styles/_base.scss */
+  /* line 89, ../../src/styles/_base.scss */
   .cabin {
     display: none;
   }
-}
-
-/* line 85, ../../src/styles/_base.scss */
-.pagination li {
-  font-size: 1.2em;
-  padding: 10px 0 20px;
-  position: absolute;
-}
-/* line 91, ../../src/styles/_base.scss */
-.pagination a {
-  text-decoration: none;
-}
-/* line 94, ../../src/styles/_base.scss */
-.pagination a:hover {
-  text-decoration: underline;
-}
-
-/* line 100, ../../src/styles/_base.scss */
-.older {
-  left: 0;
-}
-
-/* line 104, ../../src/styles/_base.scss */
-.newer {
-  right: 0;
 }
 
 /* line 1, ../../src/styles/_nav.scss */
