@@ -59,25 +59,6 @@ body {
   @include breakpoint(big-phone) {
     width: 88%;
   }
-
-  @include breakpoint(small-phone) {
-  }
-}
-
-.cabin {
-  position: fixed;
-  right: .5em;
-  bottom: .5em;
-  width: 1.6em;
-  opacity: .2;
-
-  &:hover {
-    opacity: .6;
-  }
-
-  @include breakpoint(big-phone) {
-    display: none;
-  }
 }
 
 .pagination {
@@ -103,4 +84,20 @@ body {
 
 .newer {
   right: 0;
+}
+
+.cabin {
+  position: fixed;
+  right: .5em;
+  bottom: .5em;
+  width: 1.6em;
+  opacity: .2;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  @include breakpoint(big-phone) {
+    display: none;
+  }
 }
