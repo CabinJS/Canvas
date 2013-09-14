@@ -934,55 +934,53 @@ nav a:hover {
 /* line 1, ../../src/styles/_post.scss */
 .post-head {
   padding-bottom: 5px;
-  position: relative;
 }
-/* line 5, ../../src/styles/_post.scss */
+/* line 4, ../../src/styles/_post.scss */
 .post-head a {
   text-decoration: none;
 }
 
-/* line 10, ../../src/styles/_post.scss */
+/* line 9, ../../src/styles/_post.scss */
 .post-title {
   margin: 15px 0;
   font-weight: normal;
   font-size: 2.4em;
 }
 
-/* line 16, ../../src/styles/_post.scss */
+/* line 15, ../../src/styles/_post.scss */
 .post-date {
-  margin: 0px;
   font-size: 1.3em;
   color: rgba(57, 56, 56, 0.5);
 }
 
-/* line 22, ../../src/styles/_post.scss */
+/* line 20, ../../src/styles/_post.scss */
 .post-body {
   margin-bottom: 1.2em;
   line-height: 1.65em;
 }
-/* line 26, ../../src/styles/_post.scss */
+/* line 24, ../../src/styles/_post.scss */
 .post-body p a:hover {
   color: #4183c4;
 }
-/* line 31, ../../src/styles/_post.scss */
+/* line 29, ../../src/styles/_post.scss */
 .post-body img {
   max-width: 100%;
 }
 
-/* line 36, ../../src/styles/_post.scss */
+/* line 34, ../../src/styles/_post.scss */
 .anchor {
   text-decoration: none;
 }
 
-/* line 40, ../../src/styles/_post.scss */
+/* line 38, ../../src/styles/_post.scss */
 .highlight {
   padding: .2em 1em;
 }
 
-/* line 45, ../../src/styles/_post.scss */
+/* line 43, ../../src/styles/_post.scss */
 .highlight,
 p code {
-  background: #ebebff;
+  background: #fafaff;
   border: 1px solid #e6e6e6;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -991,12 +989,12 @@ p code {
   border-radius: 3px;
 }
 
-/* line 52, ../../src/styles/_post.scss */
+/* line 50, ../../src/styles/_post.scss */
 p code {
   padding: 0 0.23em;
 }
 
-/* line 56, ../../src/styles/_post.scss */
+/* line 54, ../../src/styles/_post.scss */
 code {
   margin: 0;
   padding: 0;
@@ -1005,7 +1003,7 @@ code {
   font-family: Monaco, Consolas, monospace;
 }
 
-/* line 64, ../../src/styles/_post.scss */
+/* line 62, ../../src/styles/_post.scss */
 pre {
   font-family: Monaco, Consolas, monospace;
   overflow: auto;
