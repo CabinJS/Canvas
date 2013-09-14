@@ -3,7 +3,7 @@ mixin postHead(post)
   .post-head.group
     a(href="#{data.baseUrl}#{post.url}")
       h1.post-title= post.title
-    h2.post-date!= 'Published ' + post.date.toLocaleDateString().split(',').slice(1).join(',')
+    span.post-date!= 'Published ' + post.date.toLocaleDateString().split(',').slice(1).join(',')
 
 mixin post(post)
     mixin postHead(post)
