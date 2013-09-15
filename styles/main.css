@@ -881,11 +881,13 @@ body {
   right: .5em;
   bottom: .5em;
   width: 1.6em;
-  opacity: .2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
 }
 /* line 96, ../../src/styles/_base.scss */
 .cabin:hover {
-  opacity: .6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
 }
 @media (max-width: 1250px) {
   /* line 89, ../../src/styles/_base.scss */
@@ -962,22 +964,22 @@ nav a:hover {
 .post-body p a:hover {
   color: #4183c4;
 }
-/* line 29, ../../src/styles/_post.scss */
+/* line 28, ../../src/styles/_post.scss */
 .post-body img {
   max-width: 100%;
 }
 
-/* line 34, ../../src/styles/_post.scss */
+/* line 33, ../../src/styles/_post.scss */
 .anchor {
   text-decoration: none;
 }
 
-/* line 38, ../../src/styles/_post.scss */
+/* line 37, ../../src/styles/_post.scss */
 .highlight {
   padding: .2em 1em;
 }
 
-/* line 43, ../../src/styles/_post.scss */
+/* line 42, ../../src/styles/_post.scss */
 .highlight,
 p code {
   background: #fafaff;
@@ -989,12 +991,12 @@ p code {
   border-radius: 3px;
 }
 
-/* line 50, ../../src/styles/_post.scss */
+/* line 49, ../../src/styles/_post.scss */
 p code {
   padding: 0 0.23em;
 }
 
-/* line 54, ../../src/styles/_post.scss */
+/* line 53, ../../src/styles/_post.scss */
 code {
   margin: 0;
   padding: 0;
@@ -1003,7 +1005,7 @@ code {
   font-family: Monaco, Consolas, monospace;
 }
 
-/* line 62, ../../src/styles/_post.scss */
+/* line 61, ../../src/styles/_post.scss */
 pre {
   font-family: Monaco, Consolas, monospace;
   overflow: auto;
