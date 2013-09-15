@@ -6,8 +6,8 @@ mixin postHead(post)
     span.post-date!= 'Published ' + post.date.toLocaleDateString().split(',').slice(1).join(',')
 
 mixin post(post)
-    mixin postHead(post)
-    .post-body!= post.content
+  mixin postHead(post)
+  .post-body!= post.content
 
 doctype 5
 html
