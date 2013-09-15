@@ -1,7 +1,7 @@
 $offBlack: hsl(10, 1%, 22%);
 
 $codeFont: Monaco, Consolas, monospace;
-$mainFont:  Georgia, Times, "Times New Roman", serif;
+$mainFont: Georgia, Times, "Times New Roman", serif;
 
 $baseTextColor: $offBlack;
 $lightTextColor: transparentize($baseTextColor, .5);
@@ -91,10 +91,10 @@ body {
   right: .5em;
   bottom: .5em;
   width: 1.6em;
-  opacity: .2;
+  @include opacity(.2);
 
   &:hover {
-    opacity: .6;
+    @include opacity(.6);
   }
 
   @include breakpoint(big-phone) {
