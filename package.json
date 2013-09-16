@@ -19,9 +19,7 @@
     "should": "~1.2.2",
     "grunt-simple-mocha": "~0.4.0",
     "wrench": "~1.5.1",
-    "js-beautify": "~1.4.0",
-    "diff": "~1.0.6",
-    "colors": "~0.6.2"
+    "html-diff": "0.0.3"
   },
   "scripts": {
     "test": "grunt testTheme"
