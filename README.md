@@ -1,33 +1,31 @@
 # Canvas
 > Starter theme for [Cabin](http://cabinjs.com)
 
-## Installation
+[![Dependency Status](https://gemnasium.com/CabinJS/Canvas.png)](https://gemnasium.com/CabinJS/Canvas) [![Travis Status](https://travis-ci.org/CabinJS/Canvas.png?branch=master)](https://travis-ci.org/CabinJS/Canvas)
 
-To use Canvas you must have [Node.js](http://nodejs.org/), [Git](http://git-scm.com/), [Python 2.7](http://www.python.org/) (for [Pygments](http://pygments.org/)), and [Compass](http://compass-style.org/) installed.
+## Using Canvas
 
-First install Cabin and Grunt globally with this command:
+To use Canvas, go to the [GitHub page](http://cabinjs.github.io/Canvas/).
 
-```bash
-npm install -g cabin grunt-cli
-```
+## Contributing to Canvas
 
-Then scaffold a static site generator using the Canvas theme with this command:
+### Theme Philosopy
 
-```bash
-cabin new blog CabinJS/Canvas
-```
+Canvas is a starter theme meant to be built on top of. It provides a basic usage of grunt-pages and project scaffold for people who want to build custom static sites using Cabin.
 
-Now change into the `blog` directory and run the `grunt` command:
+#### Tests
 
-```bash
-cd blog && grunt
-```
+Canvas uses Travis CI to make sure the theme installs correctly using the Cabin version listed in the package.json's dependencies, and that the html output is the same for both the Jade and EJS template engines. To run the tests, run `grunt test` in your terminal.
 
-This will build your site, start a static file server, open a browser tab with the site's homepage, and start a watch process to rebuild your site when source files change.
+If the installation test fails, try installing the theme manually with the `--local` flag. If the template engine output test fails, read the [testing engine output](#testing-engine-output) section below.
 
-Try editing a markdown file in the `posts` folder or css in the `src/styles` folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.
+### Template Engine Support
 
-**Note: In the future, you can build your site by running the `grunt` command in the `blog` folder.**
+Canvas supports both the Jade and EJS template engines. As such, when contributing to Canvas, make sure to make template changes in both engines. We have a grunt task, `engineDiff` which will build a site using both engines and print any differences the engine's html output.
+
+#### Testing engine output
+
+The best workflow is to work on your preferred template engine and then make the other one match by running `engineDiff`. The `engineDiff` task diffs the engine output, and then watches the template files for changes to re-compare, so you can just edit templates and keep comparing until the html output diff is empty.
 
 ## License
 
