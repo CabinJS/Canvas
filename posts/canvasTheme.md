@@ -81,7 +81,7 @@ function praise (thing) {
   console.log(thing + ' is so great!');
 }
 
-praise('Candy');
+praise('Canvas');
 ```
 ### Linked headers(click me)
 Link into specific sections of your posts.
