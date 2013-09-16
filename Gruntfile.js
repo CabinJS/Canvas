@@ -114,9 +114,6 @@ module.exports = function (grunt) {
       },
       install: {
         src: ['test/testThemeInstallation.js']
-      },
-      engine: {
-        src: ['test/testEngineDiff.js']
       }
     }
   });
@@ -153,7 +150,7 @@ module.exports = function (grunt) {
     grunt.task.run('testTheme');
   });
 
-  grunt.registerTask('testTheme', ['clean', 'buildEngines', 'simplemocha']);
+  grunt.registerTask('testTheme', ['clean', 'buildEngines', 'diffEngines', 'simplemocha']);
   grunt.registerTask('engineDiff', ['buildEngines', 'diffEngines', 'watch:engineDiff']);
 
   grunt.registerTask('buildEngines', 'Builds template engines to make sure outputted html is the same', function () {
@@ -170,8 +167,18 @@ module.exports = function (grunt) {
     grunt.task.run('pages:engineDiff');
   });
 
-  grunt.registerTask('diffEngines', 'Looks at the difference between each template engine\'s html output', function () {
-    require('./test/printEngineDiff.js')();
+  grunt.registerTask('diffEngines', 'Logs difference between each template engine\'s html output', function (test) {
+    var diffResult = require('html-diff')([{
+      name: 'Jade',
+      path: 'dist'
+    }, {
+      name: 'EJS',
+      path: '.engineDiff'
+    }]);
+
+    if (!diffResult && test) {
+      grunt.fail.fatal('Template engine diff failed.');
+    }
   });
 
 
