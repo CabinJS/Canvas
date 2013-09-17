@@ -10,7 +10,7 @@ The theme's source code is located at the [Canvas GitHub repo](https://github.co
 
 ## Installation
 
-To use Canvas you must have [Node.js](http://nodejs.org/), [Python 2.7](http://www.python.org/) (for [Pygments](http://pygments.org/)), and [Compass](http://compass-style.org/) installed.
+To use Canvas you must have [Node.js](http://nodejs.org/), [Python](http://www.python.org/) (for [Pygments](http://pygments.org/)), and [Compass](http://compass-style.org/) installed.
 
 First install Cabin and Grunt globally with this command:
 
