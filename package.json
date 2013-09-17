@@ -2,8 +2,8 @@
   "name": "Canvas",
   "version": "0.0.0",
   "dependencies": {
-    "cabin": "~0.2.0",
-    "grunt-pages": "~0.6.0"
+    "cabin": "~0.3.0",
+    "grunt-pages": "~0.7.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
