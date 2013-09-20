@@ -9,11 +9,11 @@
     <% var page = pages[i] %>
     <% if (i === currentIndex - 1) { %>
       <li class="newer">
-        <a href="<%= data.baseUrl %><%= page.url %>"> Newer &#8594;</a>
+        <a href="<%= page.url %>"> Newer &#8594;</a>
       </li>
     <% } else if (i === currentIndex + 1) { %>
       <li class="older">
-        <a href="<%= data.baseUrl %><%= page.url %>" class="active-page"> &#8592; Older</a>
+        <a href="<%= page.url %>" class="active-page"> &#8592; Older</a>
       </li>
     <% } %>
   <% } %>
