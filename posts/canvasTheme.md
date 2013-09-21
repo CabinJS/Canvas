@@ -1,8 +1,8 @@
-----
-title: Canvas Theme
-date:  2013-9-16
-description: Description of Canvas's features
-----
+{
+  title: "Canvas Theme",
+  date:  "2013-9-16",
+  description: "Description of Canvas's features"
+}
 
 Canvas is a starter theme for [Cabin](http://cabinjs.com).
 
