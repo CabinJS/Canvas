@@ -1,8 +1,8 @@
-----
-title: Canvas Theme
-date:  2013-9-16
-description: Description of Canvas's features
-----
+{
+  title: "Canvas Theme",
+  date:  "2013-9-16",
+  description: "Description of Canvas's features"
+}
 
 Canvas is a starter theme for [Cabin](http://cabinjs.com).
 
@@ -72,7 +72,18 @@ To learn more about post metadata, check out [grunt-pages](https://github.com/Ca
 
 [Normailze.css](https://github.com/CabinJS/Candy/blob/master/src/styles/normalize.scss) is used to normalize styles across browsers.
 
+#### IcoMoon
+
+Candy uses the [IcoMoon App](http://icomoon.io/app/) to generate icon fonts. By default it uses icons for social media and comments, but you can easily add and remove icons.
+
+To alter the icons, go to [this](http://icomoon.io/app/) url, and click the below session icon in the bottom right and upload the `src/styles/IcoMoon Session.json` file.
+
+<img src="http://i.imgur.com/7fmXyfF.png">
+
+After updating the icons simply download them and replace the `fonts` folder inside the `src/styles` folder and replace the contents of `src/styles/_icon.scss` with `style.css`. You will also need to update the `src/styles/IcoMoon Session.json` by clicking `Store Session` after clicking the session icon to allow for future icon changes.
+
 ## Markdown
+
 Cabin supports [GitHub flavored Markdown](https://help.github.com/articles/github-flavored-markdown) for its static site generation. It has awesome features like:
 
 ### Syntax highlighted code blocks
@@ -83,5 +94,5 @@ function praise (thing) {
 
 praise('Canvas');
 ```
-### Linked headers(click me)
+### Linked headers(link on the left)
 Link into specific sections of your posts.

@@ -32,6 +32,24 @@
 
 .anchor {
   text-decoration: none;
+  position: absolute;
+  margin-left: -1.7em;
+  padding-left: 1.7em;
+  outline: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  &:hover .header-link {
+    visibility: visible;
+  }
+}
+
+.header-link {
+  @extend .icon-link;
+  margin-left: -1.7em;
+  font-size: .65em;
+  visibility: hidden;
 }
 
 .highlight {
