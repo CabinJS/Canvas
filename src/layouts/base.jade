@@ -1,7 +1,7 @@
 //- Mixin for post, used on homepage and post page
 mixin postHead(post)
   .post-head.group
-    a(href="#{post.url}")
+    a(href="#{data.baseUrl}#{post.url}")
       h1.post-title= post.title
     span.post-date!= 'Published ' + post.date.toLocaleDateString().split(',').slice(1).join(',')
 
@@ -13,23 +13,22 @@ doctype 5
 html
   head
     meta(charset="utf8")
-    base(href="#{data.baseUrl}")
     meta(name="viewport", content="width=device-width")
-    link(rel="icon", type="image/png", href="images/cabin.png")
-    link(href="styles/main.css", rel="stylesheet")
+    link(rel="icon", type="image/png", href="#{data.baseUrl}images/cabin.png")
+    link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
     block head
       title= "My Blog"
   body
     .center
       nav.group
         h1.name
-          a(href="") My Name
+          a(href="#{data.baseUrl}") My Name
         ul.nav-links
           li.text-link
-            a(href="about.html") about
+            a(href="#{data.baseUrl}about.html") about
           li.text-link
-            a(href="archives.html") archives
+            a(href="#{data.baseUrl}archives.html") archives
       block content
 
     a(href="http://cabinjs.com")
-      img.cabin(src="images/cabin.png")
+      img.cabin(src="#{data.baseUrl}images/cabin.png")

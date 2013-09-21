@@ -12,9 +12,9 @@ block content
       - var page = pages[i];
       - if (i === currentIndex - 1) {
         li.newer
-          a(href="#{page.url}") Newer &#8594;
+          a(href="#{data.baseUrl}#{page.url}") Newer &#8594;
       - } else if (i === currentIndex + 1) {
         li.older
-          a.active-page(href="#{page.url}") &#8592; Older
+          a.active-page(href="#{data.baseUrl}#{page.url}") &#8592; Older
       - }
     - }
