@@ -21,8 +21,8 @@
           <h1 class="post-title">Canvas Theme</h1></a><span class="post-date">Published  September 16, 2013</span></div>
       <div class="post-body"><p>Canvas is a starter theme for <a href="http://cabinjs.com">Cabin</a>.</p>
 <p>The theme&#39;s source code is located at the <a href="https://github.com/CabinJS/Canvas">Canvas GitHub repo</a>.</p>
-<a name="installation" class="anchor" href="#installation"><h2>Installation</h2>
-</a><p>To use Canvas you must have <a href="http://nodejs.org/">Node.js</a>, <a href="http://www.python.org/">Python</a> (for <a href="http://pygments.org/">Pygments</a>), and <a href="http://compass-style.org/">Compass</a> installed.</p>
+<h2><a name="installation"class="anchor" href="#installation"><span class="header-link"></span></a>Installation</h2>
+<p>To use Canvas you must have <a href="http://nodejs.org/">Node.js</a>, <a href="http://www.python.org/">Python</a> (for <a href="http://pygments.org/">Pygments</a>), and <a href="http://compass-style.org/">Compass</a> installed.</p>
 <p>First install Cabin and Grunt globally with this command:</p>
 <pre><code class="lang-bash"><div class="highlight"><pre>npm install -g cabin grunt-cli
 </pre></div>
@@ -38,37 +38,42 @@
 <p>This will build your site, start a static file server, open a browser tab with the site&#39;s homepage, and start a watch process to rebuild your site when source files change.</p>
 <p>Try editing a markdown file in the <code>posts</code> folder or css in the <code>src/styles</code> folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.</p>
 <p><strong>Note: In the future, you can build your site by running the <code>grunt</code> command in the <code>blog</code> folder.</strong></p>
-<a name="user-guide" class="anchor" href="#user-guide"><h2>User Guide</h2>
-</a><a name="expected-files-to-edit" class="anchor" href="#expected-files-to-edit"><h3>Expected files to edit</h3>
-</a><p>There are parts of the Canvas theme which you are expected to edit when building your site. Here they are:</p>
-<a name="pages" class="anchor" href="#pages"><h4>Pages</h4>
-</a><p>You are expected to edit the <code>src/pages/about.(jade/ejs)</code> page to describe the site.</p>
-<a name="posts" class="anchor" href="#posts"><h4>Posts</h4>
-</a><p>You are expected to edit the default posts and add your own metadata and content.</p>
-<a name="authoring-posts" class="anchor" href="#authoring-posts"><h3>Authoring Posts</h3>
-</a><p>Candy generates pages using markdown posts in the <code>posts</code> folder. It expects markdown posts to contain two required metadata properties:</p>
-<a name="title" class="anchor" href="#title"><h4>title</h4>
-</a><p>Type: <code>String</code></p>
+<h2><a name="user-guide"class="anchor" href="#user-guide"><span class="header-link"></span></a>User Guide</h2>
+<h3><a name="expected-files-to-edit"class="anchor" href="#expected-files-to-edit"><span class="header-link"></span></a>Expected files to edit</h3>
+<p>There are parts of the Canvas theme which you are expected to edit when building your site. Here they are:</p>
+<h4><a name="pages"class="anchor" href="#pages"><span class="header-link"></span></a>Pages</h4>
+<p>You are expected to edit the <code>src/pages/about.(jade/ejs)</code> page to describe the site.</p>
+<h4><a name="posts"class="anchor" href="#posts"><span class="header-link"></span></a>Posts</h4>
+<p>You are expected to edit the default posts and add your own metadata and content.</p>
+<h3><a name="authoring-posts"class="anchor" href="#authoring-posts"><span class="header-link"></span></a>Authoring Posts</h3>
+<p>Candy generates pages using markdown posts in the <code>posts</code> folder. It expects markdown posts to contain two required metadata properties:</p>
+<h4><a name="title"class="anchor" href="#title"><span class="header-link"></span></a>title</h4>
+<p>Type: <code>String</code></p>
 <p>Title of the post which is also used as its url.</p>
-<a name="date" class="anchor" href="#date"><h4>date</h4>
-</a><p>Type: <code>String</code></p>
+<h4><a name="date"class="anchor" href="#date"><span class="header-link"></span></a>date</h4>
+<p>Type: <code>String</code></p>
 <p>DateString which is parsed and displayed as the publishing date of the post.</p>
 <p>To learn more about post metadata, check out <a href="https://github.com/CabinJS/grunt-pages#authoring-posts">grunt-pages</a>.</p>
-<a name="included-libraries-tools" class="anchor" href="#included-libraries-tools"><h3>Included libraries/tools</h3>
-</a><a name="normalize.css" class="anchor" href="#normalize.css"><h4>normalize.css</h4>
-</a><p><a href="https://github.com/CabinJS/Candy/blob/master/src/styles/normalize.scss">Normailze.css</a> is used to normalize styles across browsers.</p>
-<a name="markdown" class="anchor" href="#markdown"><h2>Markdown</h2>
-</a><p>Cabin supports <a href="https://help.github.com/articles/github-flavored-markdown">GitHub flavored Markdown</a> for its static site generation. It has awesome features like:</p>
-<a name="syntax-highlighted-code-blocks" class="anchor" href="#syntax-highlighted-code-blocks"><h3>Syntax highlighted code blocks</h3>
-</a><pre><code class="lang-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">praise</span> <span class="p">(</span><span class="nx">thing</span><span class="p">)</span> <span class="p">{</span>
+<h3><a name="included-libraries-tools"class="anchor" href="#included-libraries-tools"><span class="header-link"></span></a>Included libraries/tools</h3>
+<h4><a name="normalize-css"class="anchor" href="#normalize-css"><span class="header-link"></span></a>normalize.css</h4>
+<p><a href="https://github.com/CabinJS/Candy/blob/master/src/styles/normalize.scss">Normailze.css</a> is used to normalize styles across browsers.</p>
+<h4><a name="icomoon"class="anchor" href="#icomoon"><span class="header-link"></span></a>IcoMoon</h4>
+<p>Candy uses the <a href="http://icomoon.io/app/">IcoMoon App</a> to generate icon fonts. By default it uses icons for social media and comments, but you can easily add and remove icons.</p>
+<p>To alter the icons, go to <a href="http://icomoon.io/app/">this</a> url, and click the below session icon in the bottom right and upload the <code>src/styles/IcoMoon Session.json</code> file.</p>
+<p><img src="http://i.imgur.com/7fmXyfF.png"></p>
+<p>After updating the icons simply download them and replace the <code>fonts</code> folder inside the <code>src/styles</code> folder and replace the contents of <code>src/styles/_icon.scss</code> with <code>style.css</code>. You will also need to update the <code>src/styles/IcoMoon Session.json</code> by clicking <code>Store Session</code> after clicking the session icon to allow for future icon changes.</p>
+<h2><a name="markdown"class="anchor" href="#markdown"><span class="header-link"></span></a>Markdown</h2>
+<p>Cabin supports <a href="https://help.github.com/articles/github-flavored-markdown">GitHub flavored Markdown</a> for its static site generation. It has awesome features like:</p>
+<h3><a name="syntax-highlighted-code-blocks"class="anchor" href="#syntax-highlighted-code-blocks"><span class="header-link"></span></a>Syntax highlighted code blocks</h3>
+<pre><code class="lang-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">praise</span> <span class="p">(</span><span class="nx">thing</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">thing</span> <span class="o">+</span> <span class="s1">&#39; is so great!&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">praise</span><span class="p">(</span><span class="s1">&#39;Canvas&#39;</span><span class="p">);</span>
 </pre></div>
 </code></pre>
-<a name="linked-headers-click-me-" class="anchor" href="#linked-headers-click-me-"><h3>Linked headers(click me)</h3>
-</a><p>Link into specific sections of your posts.</p>
+<h3><a name="linked-headers-link-on-the-left-"class="anchor" href="#linked-headers-link-on-the-left-"><span class="header-link"></span></a>Linked headers(link on the left)</h3>
+<p>Link into specific sections of your posts.</p>
 </div>
     </div><a href="http://cabinjs.com"><img src="/Canvas/images/cabin.png" class="cabin"></a>
   </body>
