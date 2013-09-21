@@ -13,6 +13,14 @@ To use Canvas, go to the [GitHub page](http://cabinjs.github.io/Canvas/).
 
 Canvas is a starter theme meant to be built on top of. It provides a basic usage of grunt-pages and project scaffold for people who want to build custom static sites using Cabin.
 
+#### Updating Icons
+
+Canvas uses the [IcoMoon App](http://icomoon.io/app/) to generate icon fonts. To alter the icons, go to [this](http://icomoon.io/app/) url, and click the below session icon in the bottom right and upload the `src/styles/IcoMoon Session.json` file.
+
+<img src="http://i.imgur.com/7fmXyfF.png">
+
+After updating the icons simply download them and replace the `fonts` folder inside the `src/styles` folder and replace the contents of `src/styles/_icon.scss` with `style.css`. You will also need to update the `src/styles/IcoMoon Session.json` by clicking `Store Session` after clicking the session icon to allow for future icon changes.
+
 #### Tests
 
 Canvas uses Travis CI to make sure the theme installs correctly using the Cabin version listed in the package.json's dependencies, and that the html output is the same for both the Jade and EJS template engines. To run the tests, run `grunt test` in your terminal.
