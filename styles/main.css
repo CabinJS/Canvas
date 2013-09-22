@@ -1044,11 +1044,12 @@ h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
 }
 
 /* line 55, ../../src/styles/_post.scss */
-.highlight {
-  padding: .2em 1em;
+.highlight pre {
+  padding: 15px;
+  margin-bottom: 0;
 }
 
-/* line 60, ../../src/styles/_post.scss */
+/* line 61, ../../src/styles/_post.scss */
 .highlight,
 p code {
   background: #fafaff;
@@ -1060,12 +1061,12 @@ p code {
   border-radius: 3px;
 }
 
-/* line 67, ../../src/styles/_post.scss */
+/* line 68, ../../src/styles/_post.scss */
 p code {
   padding: 0 0.23em;
 }
 
-/* line 71, ../../src/styles/_post.scss */
+/* line 72, ../../src/styles/_post.scss */
 code {
   margin: 0;
   padding: 0;
@@ -1074,8 +1075,10 @@ code {
   font-family: Monaco, Consolas, monospace;
 }
 
-/* line 79, ../../src/styles/_post.scss */
+/* line 80, ../../src/styles/_post.scss */
 pre {
   font-family: Monaco, Consolas, monospace;
   overflow: auto;
+  margin-top: 0em;
+  margin-bottom: -1.5em;
 }
