@@ -3,7 +3,7 @@
 
 [![Dependency Status](https://gemnasium.com/CabinJS/Canvas.png)](https://gemnasium.com/CabinJS/Canvas) [![Travis Status](https://travis-ci.org/CabinJS/Canvas.png?branch=master)](https://travis-ci.org/CabinJS/Canvas)
 
-![Canvas](http://i.imgur.com/nLkDQ08.png)
+[![Canvas](http://i.imgur.com/nLkDQ08.png)](http://cabinjs.github.io/Canvas/)
 
 ## Using Canvas
 
