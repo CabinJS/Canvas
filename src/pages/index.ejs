@@ -8,13 +8,9 @@
   <% for (var i = 0; i < pages.length; i++) { %>
     <% var page = pages[i] %>
     <% if (i === currentIndex - 1) { %>
-      <span class="newer">
-        <a href="<%= data.baseUrl %><%= page.url %>"> Newer &#8594;</a>
-      </span>
+      <a href="<%= data.baseUrl %><%= page.url %>" class="newer"> Newer &#8594;</a>
     <% } else if (i === currentIndex + 1) { %>
-      <span class="older">
-        <a href="<%= data.baseUrl %><%= page.url %>" class="active-page"> &#8592; Older</a>
-      </span>
+      <a href="<%= data.baseUrl %><%= page.url %>" class="older"> &#8592; Older</a>
     <% } %>
   <% } %>
 </div>
