@@ -52,8 +52,9 @@ h4, h5, h6 {
   visibility: hidden;
 }
 
-.highlight {
-  padding: .2em 1em;
+.highlight pre {
+  padding: 15px;
+  margin-bottom: 0;
 }
 
 .highlight,
@@ -79,4 +80,6 @@ code {
 pre {
   font-family: $codeFont;
   overflow: auto;
+  margin-top: 0em;
+  margin-bottom: -1.5em;
 }
