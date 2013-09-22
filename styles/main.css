@@ -851,7 +851,7 @@ body {
 }
 
 /* line 66, ../../src/styles/_base.scss */
-.pagination li {
+.pagination span {
   font-size: 1.2em;
   padding: 10px 0 20px;
 }
