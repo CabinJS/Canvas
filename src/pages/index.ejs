@@ -4,18 +4,18 @@
   <% include ../layouts/_post %>
 <% }) %>
 
-<ul class="pagination group">
+<div class="pagination group">
   <% for (var i = 0; i < pages.length; i++) { %>
     <% var page = pages[i] %>
     <% if (i === currentIndex - 1) { %>
-      <li class="newer">
+      <span class="newer">
         <a href="<%= data.baseUrl %><%= page.url %>"> Newer &#8594;</a>
-      </li>
+      </span>
     <% } else if (i === currentIndex + 1) { %>
-      <li class="older">
+      <span class="older">
         <a href="<%= data.baseUrl %><%= page.url %>" class="active-page"> &#8592; Older</a>
-      </li>
+      </span>
     <% } %>
   <% } %>
-</ul>
+</div>
 <% include ../layouts/_footer %>
