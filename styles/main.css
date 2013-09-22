@@ -851,30 +851,27 @@ body {
 }
 
 /* line 66, ../../src/styles/_base.scss */
-.pagination span {
+.pagination a {
+  text-decoration: none;
   font-size: 1.2em;
   padding: 10px 0 20px;
 }
 /* line 71, ../../src/styles/_base.scss */
-.pagination a {
-  text-decoration: none;
-}
-/* line 74, ../../src/styles/_base.scss */
 .pagination a:hover {
   text-decoration: underline;
 }
 
-/* line 80, ../../src/styles/_base.scss */
+/* line 77, ../../src/styles/_base.scss */
 .older {
   float: left;
 }
 
-/* line 84, ../../src/styles/_base.scss */
+/* line 81, ../../src/styles/_base.scss */
 .newer {
   float: right;
 }
 
-/* line 88, ../../src/styles/_base.scss */
+/* line 85, ../../src/styles/_base.scss */
 .cabin {
   position: absolute;
   right: 0.5em;
@@ -883,13 +880,13 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
-/* line 95, ../../src/styles/_base.scss */
+/* line 92, ../../src/styles/_base.scss */
 .cabin:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 @media (max-width: 1250px) {
-  /* line 88, ../../src/styles/_base.scss */
+  /* line 85, ../../src/styles/_base.scss */
   .cabin {
     display: none;
   }
