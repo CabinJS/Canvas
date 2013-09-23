@@ -32,7 +32,9 @@ cd blog && grunt
 
 This will build your site, start a static file server, open a browser tab with the site's homepage, and start a watch process to rebuild your site when source files change.
 
-Try editing a markdown file in the `posts` folder or css in the `src/styles` folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.
+Try editing a markdown file in the `posts` folder or CSS in the `src/styles` folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.
+
+Once you are happy with the state of your site, you can deploy the contents of the `dist` folder using one of Cabin's [deployment options](http://www.cabinjs.com/#recommended-deployment-tools).
 
 **Note: In the future, you can build your site by running the `grunt` command in the `blog` folder.**
 
@@ -41,6 +43,10 @@ Try editing a markdown file in the `posts` folder or css in the `src/styles` fol
 ### Expected files to edit
 
 There are parts of the Canvas theme which you are expected to edit when building your site. Here they are:
+
+#### Layouts
+
+You are expected to add your name to the nav home link in the [`src/layouts/base.jade`](https://github.com/CabinJS/Canvas/blob/master/src/layouts/base.jade#L25) or [`src/layouts/_header.ejs`](https://github.com/CabinJS/Canvas/blob/master/src/layouts/_header.ejs#L17) file. 
 
 #### Pages
 
@@ -81,6 +87,10 @@ To alter the icons, go to [this](http://icomoon.io/app/) url, and click the belo
 <img src="http://i.imgur.com/7fmXyfF.png">
 
 After updating the icons simply download them and replace the `fonts` folder inside the `src/styles` folder and replace the contents of `src/styles/_icon.scss` with `style.css`. You will also need to update the `src/styles/IcoMoon Session.json` by clicking `Store Session` after clicking the session icon to allow for future icon changes.
+
+## RSS
+
+If you would like to generate an RSS feed, check out grunt-pages' [RSS option](https://github.com/CabinJS/grunt-pages#rss) and add it to your grunt-pages config in Gruntfile.js.
 
 ## Markdown
 
