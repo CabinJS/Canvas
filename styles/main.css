@@ -817,7 +817,6 @@ a {
 /* line 36, ../../src/styles/_base.scss */
 body {
   margin: 0;
-  position: relative;
   color: #393838;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -837,56 +836,56 @@ body {
   }
 }
 
-/* line 54, ../../src/styles/_base.scss */
+/* line 53, ../../src/styles/_base.scss */
 .center {
   margin: 0 auto;
   max-width: 620px;
   width: 55%;
 }
 @media (max-width: 1250px) {
-  /* line 54, ../../src/styles/_base.scss */
+  /* line 53, ../../src/styles/_base.scss */
   .center {
     width: 88%;
   }
 }
 
-/* line 66, ../../src/styles/_base.scss */
+/* line 65, ../../src/styles/_base.scss */
 .pagination a {
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 0 20px;
 }
-/* line 71, ../../src/styles/_base.scss */
+/* line 70, ../../src/styles/_base.scss */
 .pagination a:hover {
   text-decoration: underline;
 }
 
-/* line 77, ../../src/styles/_base.scss */
+/* line 76, ../../src/styles/_base.scss */
 .older {
   float: left;
 }
 
-/* line 81, ../../src/styles/_base.scss */
+/* line 80, ../../src/styles/_base.scss */
 .newer {
   float: right;
 }
 
-/* line 85, ../../src/styles/_base.scss */
+/* line 84, ../../src/styles/_base.scss */
 .cabin {
-  position: absolute;
+  position: fixed;
   right: 0.5em;
   bottom: 0.2em;
   width: 1.8em;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
 }
-/* line 92, ../../src/styles/_base.scss */
+/* line 91, ../../src/styles/_base.scss */
 .cabin:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 @media (max-width: 1250px) {
-  /* line 85, ../../src/styles/_base.scss */
+  /* line 84, ../../src/styles/_base.scss */
   .cabin {
     display: none;
   }
