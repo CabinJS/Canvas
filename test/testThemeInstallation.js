@@ -6,7 +6,7 @@ var fs = require('fs');
 require('should');
 var wrench = require('wrench');
 
-describe('Candy theme', function () {
+describe('Canvas theme', function () {
 
   var EJSSiteName  = 'testEJSSite';
   var JadeSiteName = 'testJadeSite';
@@ -43,9 +43,9 @@ describe('Candy theme', function () {
       });
 
       gruntBuildProcess.on('close', function () {
-        fs.existsSync(EJSSiteName + '/dist/index.html').should.be.ok;
-        fs.existsSync(EJSSiteName + '/dist/blog/posts/my-cool-blog-post/index.html').should.be.ok;
-        fs.existsSync(EJSSiteName + '/dist/styles/main.css').should.be.ok;
+        fs.existsSync(EJSSiteName + '/dist/index.html').should.eql(true, 'index.html created');
+        fs.existsSync(EJSSiteName + '/dist/posts/my-cool-blog-post/index.html').should.eql(true, 'my-cool-blog-post created');
+        fs.existsSync(EJSSiteName + '/dist/styles/main.css').should.eql(true, 'main.css created');
         done();
       });
     });
@@ -63,7 +63,7 @@ describe('Candy theme', function () {
 
       gruntBuildProcess.on('close', function () {
         fs.existsSync(JadeSiteName + '/dist/index.html').should.be.ok;
-        fs.existsSync(JadeSiteName + '/dist/blog/posts/my-cool-blog-post/index.html').should.be.ok;
+        fs.existsSync(JadeSiteName + '/dist/posts/my-cool-blog-post/index.html').should.be.ok;
         fs.existsSync(JadeSiteName + '/dist/styles/main.css').should.be.ok;
         done();
       });

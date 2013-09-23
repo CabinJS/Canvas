@@ -17,7 +17,7 @@
       "src": "posts",
       "dest": "dist",
       "layout": "src/layouts/post.<%= templateEngine %>",
-      "url": "blog/posts/:title/",
+      "url": "posts/:title/",
         "options": {
         "pagination": {
           "postsPerPage": 1,
