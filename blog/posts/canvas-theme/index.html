@@ -36,11 +36,14 @@
 </pre></div>
 </code></pre>
 <p>This will build your site, start a static file server, open a browser tab with the site&#39;s homepage, and start a watch process to rebuild your site when source files change.</p>
-<p>Try editing a markdown file in the <code>posts</code> folder or css in the <code>src/styles</code> folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.</p>
+<p>Try editing a markdown file in the <code>posts</code> folder or CSS in the <code>src/styles</code> folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.</p>
+<p>Once you are happy with the state of your site, you can deploy the contents of the <code>dist</code> folder using one of Cabin&#39;s <a href="http://www.cabinjs.com/#recommended-deployment-tools">deployment options</a>.</p>
 <p><strong>Note: In the future, you can build your site by running the <code>grunt</code> command in the <code>blog</code> folder.</strong></p>
 <h2><a name="user-guide"class="anchor" href="#user-guide"><span class="header-link"></span></a>User Guide</h2>
 <h3><a name="expected-files-to-edit"class="anchor" href="#expected-files-to-edit"><span class="header-link"></span></a>Expected files to edit</h3>
 <p>There are parts of the Canvas theme which you are expected to edit when building your site. Here they are:</p>
+<h4><a name="layouts"class="anchor" href="#layouts"><span class="header-link"></span></a>Layouts</h4>
+<p>You are expected to add your name to the nav home link in the <a href="https://github.com/CabinJS/Canvas/blob/master/src/layouts/base.jade#L25"><code>src/layouts/base.jade</code></a> or <a href="https://github.com/CabinJS/Canvas/blob/master/src/layouts/_header.ejs#L17"><code>src/layouts/_header.ejs</code></a> file. </p>
 <h4><a name="pages"class="anchor" href="#pages"><span class="header-link"></span></a>Pages</h4>
 <p>You are expected to edit the <code>src/pages/about.(jade/ejs)</code> page to describe the site.</p>
 <h4><a name="posts"class="anchor" href="#posts"><span class="header-link"></span></a>Posts</h4>
@@ -62,6 +65,8 @@
 <p>To alter the icons, go to <a href="http://icomoon.io/app/">this</a> url, and click the below session icon in the bottom right and upload the <code>src/styles/IcoMoon Session.json</code> file.</p>
 <p><img src="http://i.imgur.com/7fmXyfF.png"></p>
 <p>After updating the icons simply download them and replace the <code>fonts</code> folder inside the <code>src/styles</code> folder and replace the contents of <code>src/styles/_icon.scss</code> with <code>style.css</code>. You will also need to update the <code>src/styles/IcoMoon Session.json</code> by clicking <code>Store Session</code> after clicking the session icon to allow for future icon changes.</p>
+<h2><a name="rss"class="anchor" href="#rss"><span class="header-link"></span></a>RSS</h2>
+<p>If you would like to generate an RSS feed, check out grunt-pages&#39; <a href="https://github.com/CabinJS/grunt-pages#rss">RSS option</a> and add it to your grunt-pages config in Gruntfile.js.</p>
 <h2><a name="markdown"class="anchor" href="#markdown"><span class="header-link"></span></a>Markdown</h2>
 <p>Cabin supports <a href="https://help.github.com/articles/github-flavored-markdown">GitHub flavored Markdown</a> for its static site generation. It has awesome features like:</p>
 <h3><a name="syntax-highlighted-code-blocks"class="anchor" href="#syntax-highlighted-code-blocks"><span class="header-link"></span></a>Syntax highlighted code blocks</h3>
