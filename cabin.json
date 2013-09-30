@@ -7,18 +7,16 @@
     "EJS"
   ],
   "gruntPagesConfig": {
-    "options": {
-      "pageSrc": "src/pages",
-      "data": {
-        "baseUrl": "/"
-      }
-    },
     "posts": {
       "src": "posts",
       "dest": "dist",
       "layout": "src/layouts/post.<%= templateEngine %>",
       "url": "posts/:title/",
-        "options": {
+      "options": {
+        "pageSrc": "src/pages",
+        "data": {
+          "baseUrl": "/"
+        },
         "pagination": {
           "postsPerPage": 1,
           "listPage": "src/pages/index.<%= templateEngine %>"
