@@ -120,7 +120,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', function(target) {
     if (target === 'GHPages') {
-      gruntPagesConfig.options.data.baseUrl = '/Canvas/';
+      grunt.config('pages.options.data.baseUrl', '/Canvas/');
     }
 
     grunt.task.run([
