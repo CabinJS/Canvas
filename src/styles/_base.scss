@@ -83,10 +83,10 @@ body {
 
 .cabin {
   position: fixed;
-  right: 0.5em;
-  bottom: 0.2em;
-  width: 1.8em;
-  @include opacity(.2);
+  right: 0.55em;
+  bottom: 0.3em;
+  width: 2em;
+  @include opacity(.3);
 
   &:hover {
     @include opacity(.6);
