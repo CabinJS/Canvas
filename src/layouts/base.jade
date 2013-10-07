@@ -7,7 +7,7 @@ mixin postHead(post)
 
 mixin post(post)
   mixin postHead(post)
-  .post-body!= post.content
+  .post-body.markdown!= post.content
 
 doctype 5
 html

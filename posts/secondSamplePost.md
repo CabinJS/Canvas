@@ -1,32 +1,27 @@
 {
-  title: "My cool blog post",
-  date:  "2013-6-3"
+  title: "My second cool blog post",
+  date:   "2013-08-3",
+  description: "Sample Canvas post using Cupcake Ipsum"
 }
 
-# Some [Cupake Ipsum](http://cupcakeipsum.com) to brighten your day!
+Some [Cupcake Ipsum](http://cupcakeipsum.com) to brighten your day!
 
-Chocolate bar apple pie sesame snaps jelly beans cupcake.
+Wafer donut jelly-o chocolate bar apple pie sesame snaps jelly beans cupcake.
 Tart candy canes ice cream croissant ice cream jelly-o caramels pastry apple
 pie. Marshmallow marzipan caramels muffin chupa chups faworki chocolate cake
 tootsie roll. `Apple pie sugar plum gummi bears candy icing` sweet roll chocolate
-bar.
+bar. Tiramisu jelly dragée tiramisu applicake. Tootsie roll chocolate cake cake
+apple pie cake tiramisu. Applicake chupa chups ice cream candy. Bear claw
+dessert brownie candy canes lemon drops icing. Wypas cotton candy faworki wypas
+tart ice cream ice cream.
 
 ```javascript
 console.log('yay cupcakes');
 ```
 
 Macaroon halvah tootsie roll cupcake. Chocolate marzipan pie fruitcake
-lollipop. Dessert jelly-o pastry cotton candy.
-
-### Desserts:
-
-- Wafer
-- Donut
-  - Pie
-  - `Caramels`
-- Jelly-O
-
-Caramels lemon drops croissant gummi bears cupcake macaroon oat cake chocolate bar. Sweet apple pie sweet roll
+lollipop. Dessert jelly-o pastry cotton candy. Caramels lemon drops croissant
+gummi bears cupcake macaroon oat cake chocolate bar. Sweet apple pie sweet roll
 cheesecake tiramisu pie chocolate cookie. Wafer pastry gummi bears pudding
 halvah muffin pie. Candy dragée topping. `Pastry gingerbread` muffin. Cheesecake
 dessert candy canes jelly beans apple pie lollipop candy canes dragée donut.
