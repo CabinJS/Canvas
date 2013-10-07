@@ -30,6 +30,12 @@
       visibility: visible;
     }
   }
+
+  blockquote {
+    border-left: 6px solid gainsboro;
+    margin-left: 0;
+    padding-left: 1em;
+  }
 }
 
 .header-link {
