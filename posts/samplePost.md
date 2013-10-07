@@ -18,14 +18,6 @@ console.log('yay cupcakes');
 Macaroon halvah tootsie roll cupcake. Chocolate marzipan pie fruitcake
 lollipop. Dessert jelly-o pastry cotton candy.
 
-### Desserts:
-
-- Wafer
-- Donut
-  - Pie
-  - `Caramels`
-- Jelly-O
-
 Caramels lemon drops croissant gummi bears cupcake macaroon oat cake chocolate bar. Sweet apple pie sweet roll
 cheesecake tiramisu pie chocolate cookie. Wafer pastry gummi bears pudding
 halvah muffin pie. Candy dragée topping. `Pastry gingerbread` muffin. Cheesecake
