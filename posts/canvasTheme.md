@@ -34,8 +34,6 @@ This will build your site, start a static file server, open a browser tab with t
 
 Try editing a markdown file in the `posts` folder or CSS in the `src/styles` folder and upon saving, your site will automatically be rebuilt with the updated content/styles. When you edit markdown, your browser will automatically refresh to view new content, and when editing styles, they will be injected directly into the page for an immediate update.
 
-Once you are happy with the state of your site, you can deploy the contents of the `dist` folder using one of Cabin's [deployment options](http://www.cabinjs.com/#recommended-deployment-tools).
-
 **Note: In the future, you can build your site by running the `grunt` command in the `blog` folder.**
 
 ## User Guide
@@ -71,6 +69,14 @@ Type: `String`
 DateString which is parsed and displayed as the publishing date of the post.
 
 To learn more about post metadata, check out [grunt-pages](https://github.com/CabinJS/grunt-pages#authoring-posts).
+
+### Deploying your Site
+
+If you selected a deployment tool during the installation process, you can deploy your site with the `grunt deploy` command.
+
+**Note: for Amazon S3 and FTP deployment, read the Gruntfile.js comment about how to configure your credentials.**
+
+If you didn't select a deployment tool during the theme installation, you can add one later by following the [installation guide](https://github.com/CabinJS/Cabin/wiki/Deployment-Tools) in the wiki.
 
 ### Included libraries/tools
 
