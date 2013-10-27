@@ -30,7 +30,7 @@ describe('Canvas theme', function () {
   var noInstall = process.env.NODE_ENV === 'dev' ? '--noInstall' : '';
 
   it('should generate a site when installed with Cabin selecting the EJS template engine', function (done) {
-    var cabinProcess = spawn('node', ['node_modules/cabin/bin/cabin', 'new', EJSSiteName, '.', '--local', '--templateEngine', 'EJS', noInstall]);
+    var cabinProcess = spawn('node', ['node_modules/cabin/bin/cabin', 'new', EJSSiteName, '.', '--local', '--templateEngine', 'EJS', '--deployTask', 'None', noInstall]);
     cabinProcess.on('close', function () {
 
 
@@ -52,7 +52,7 @@ describe('Canvas theme', function () {
   });
 
   it('should generate a site when installed with Cabin selecting the Jade template engine', function (done) {
-    var cabinProcess = spawn('node', ['node_modules/cabin/bin/cabin', 'new', JadeSiteName, '.', '--local', '--templateEngine', 'Jade', noInstall]);
+    var cabinProcess = spawn('node', ['node_modules/cabin/bin/cabin', 'new', JadeSiteName, '.', '--local', '--templateEngine', 'Jade', '--deployTask', 'None', noInstall]);
     cabinProcess.on('close', function () {
       if (noInstall) {
         wrench.copyDirSyncRecursive('node_modules', JadeSiteName + '/node_modules');
