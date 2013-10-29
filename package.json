@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "cabin": "~0.3.0",
-    "grunt-pages": "~0.8.0"
+    "grunt-pages": "~0.9.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
