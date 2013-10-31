@@ -3,8 +3,11 @@
 
 /*
 Note: To edit icons, go to the following url: http://icomoon.io/app/
-      Then click the stacked circle icon in the bottom right and upload the IcoMoon Session.json file from this folder
-      After updating the icons, download them and copy the fonts folder and the style.css into this folder and rename style.css to _icons.scss
+      then click `Import Icons` in the top left and upload the `src/styles/selection.json` file.
+
+      After updating the icons simply download them and replace the `fonts` folder inside the `src/styles` folder,
+      replace the `src/styles/selection.json` with the new `selection.json` and replace the contents of
+      `src/styles/_icon.scss` with `style.css`.
 */
 
 @font-face {
