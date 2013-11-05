@@ -78,6 +78,27 @@ If you selected a deployment tool during the installation process, you can deplo
 
 If you didn't select a deployment tool during the theme installation, you can add one later by following the [installation guide](https://github.com/CabinJS/Cabin/wiki/Deployment-Tools) in the wiki.
 
+#### Deploying to a subdirectory
+
+If you are not deploying to the root of your site, you will need to modify the grunt-pages `data.baseUrl` property during deployment so that the asset paths and URLs resolve correctly. Here is an example which augments the `build` and `deploy` tasks when deploying a site to `/blog/`:
+
+```js
+grunt.registerTask('build', function (target) {
+  if (target === 'deploy') {
+    grunt.config('pages.posts.options.data.baseUrl', '/blog/');
+  }
+
+  grunt.task.run([
+    'clean',
+    'pages',
+    'compass',
+    'copy'
+  ]);
+});
+
+grunt.registerTask('deploy', ['build:deploy', 'yourChosenDeployTask']);
+```
+
 ### Included libraries/tools
 
 #### normalize.css
