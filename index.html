@@ -39,6 +39,24 @@
 <p>If you selected a deployment tool during the installation process, you can deploy your site with the <code>grunt deploy</code> command.</p>
 <p><strong>Note: for Amazon S3 and FTP deployment, read the Gruntfile.js comment about how to configure your credentials.</strong></p>
 <p>If you didn&#39;t select a deployment tool during the theme installation, you can add one later by following the <a href="https://github.com/CabinJS/Cabin/wiki/Deployment-Tools">installation guide</a> in the wiki.</p>
+<h4><a name="deploying-to-a-subdirectory" class="anchor" href="#deploying-to-a-subdirectory"><span class="header-link"></span></a>Deploying to a subdirectory</h4>
+<p>If you are not deploying to the root of your site, you will need to modify the grunt-pages <code>data.baseUrl</code> property during deployment so that the asset paths and URLs resolve correctly. Here is an example which augments the <code>build</code> and <code>deploy</code> tasks when deploying a site to <code>/blog/</code>:</p>
+<pre><code class="lang-js"><div class="highlight"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">target</span> <span class="o">===</span> <span class="s1">&#39;deploy&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="s1">&#39;pages.posts.options.data.baseUrl&#39;</span><span class="p">,</span> <span class="s1">&#39;/blog/&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">run</span><span class="p">([</span>
+    <span class="s1">&#39;clean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;compass&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;copy&#39;</span>
+  <span class="p">]);</span>
+<span class="p">});</span>
+
+<span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;deploy&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;build:deploy&#39;</span><span class="p">,</span> <span class="s1">&#39;yourChosenDeployTask&#39;</span><span class="p">]);</span>
+</pre></div>
+</code></pre>
 <h3><a name="included-libraries-tools" class="anchor" href="#included-libraries-tools"><span class="header-link"></span></a>Included libraries/tools</h3>
 <h4><a name="normalize-css" class="anchor" href="#normalize-css"><span class="header-link"></span></a>normalize.css</h4>
 <p><a href="https://github.com/CabinJS/Canvas/blob/master/src/styles/normalize.scss">Normailze.css</a> is used to normalize styles across browsers.</p>
